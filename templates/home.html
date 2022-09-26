@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>Encuesta Dojo</title>
+</head>
+<body>
+    <div class="box">
+        <div class="titulo">Encuesta Dojo</div>
+        <div class="encuesta">
+            <form action="/redirect" method="post">
+            <div class="mb-3 row">
+                <label for="name" class="col-sm-2 col-form-label">Your Name:</label>
+                <div class="col-sm-10">
+                    <input name="nombre" type="text" class="form-control" id="inputPassword">
+                </div>
+            </div>
+            <div>
+                <select name="ciudad"s class="form-select" aria-label="Default select example">
+                    <label for="ciudades">Dojo Location:</label>
+                    <option selected>-- Selecciona tu ciudad --</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Burbank">Burbank</option>
+                    <option value="Online">Online</option>
+                    <option value="Bellevue">Bellevue</option>
+                </select>
+            </div>
+            <div>
+                <select  name="lenguaje" class="form-select" aria-label="Default select example">
+                    <label for="ciudades">Favourite Languaje:</label>
+                    <option selected>-- Selecciona tu lenguaje de programación --</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                    <option value="C#">C#</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Comentario (opcional):</label>
+                <textarea name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button id="boton" type="submit" class="btn btn-danger">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
